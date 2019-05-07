@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 
 //Struct declarations
@@ -157,10 +156,3 @@ void delete_from_key(linkedList* list,int key){
 
     }
 }
-
-
-
-
-
-
-
