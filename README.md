@@ -83,8 +83,8 @@ The structure is pretty much like an array of linkedlists known as `hashMap`
 
 ### Sample Programs
 
-- Bracket Evaluation using Stack [bracketEvaluation.c](https://github.com/gkrishnan724/C-data_structures/samples/bracketEvaluation.c)
+- Bracket Evaluation using Stack [bracketEvaluation.c](https://github.com/gkrishnan724/C-data_structures/blob/master/samples/bracketEvaluation.c)
 
-- Finding pair in an array that sum to a given value [sumPair.c](https://github.com/gkrishnan724/C-data_structures/samples/sumPair.c)
+- Finding pair in an array that sum to a given value using hashMap [sumPair.c](https://github.com/gkrishnan724/C-data_structures/blob/master/samples/sumPair.c)
 
 
