@@ -26,7 +26,17 @@ queue* create_queue(){
 }
 
 void append_queue(queue* q,int val){
-    q->back = append(q->list,val);
+    Node* newnode = (Node*)malloc(sizeof(Node));
+    newnode->val = val;
+    newnode->next = NULL;
+    if(q->back == NULL){
+        q->list->head = newnode;
+        q->back = newnode;
+    }
+    else{
+        q->back->next = newnode;
+        q->back = newnode;
+    }
     q->front = q->list->head;
 }
 
