@@ -22,6 +22,8 @@ int get(linkedList*,int);
 int get_from_key(linkedList*,int);
 void delete_from_key(linkedList*,int);
 void delete(linkedList*,int);
+void delete_value(linkedList*,int);
+void reverse_list(linkedList*);
 
 //Function definition
 linkedList* create_linked_list(){
@@ -83,10 +85,10 @@ void append_map(linkedList* list,int key,int value){
 void print_elements(linkedList* list){
     Node* head = list->head;
     while(head != NULL){
-        printf("%d ",head->val);
+        printf("%d->",head->val);
         head = head->next;
     }
-    printf("\n");
+    printf("NULL\n");
 }
 
 int get(linkedList* list,int index){
@@ -122,6 +124,45 @@ void delete(linkedList * list,int index){
         free(head);
         list->length -= 1;
     }
+}
+
+void delete_value(linkedList* list,int val){
+    
+    Node *head = list->head;
+    Node *prev = head;
+    while(head->val != val && head != NULL){
+        prev = head;
+        head = head->next;
+    }
+    if(head == NULL){
+        return;
+    }
+    else{
+        prev->next = head->next;
+        head->next = NULL;
+        free(head);
+        list->length -= 1;
+    }
+}
+
+void reverse_list(linkedList* list){
+    if(list->length == 0 || list->length == 1){
+        return;
+    }
+    Node *temp = list->head->next;
+    Node *prev = list->head;
+    prev->next = NULL;
+    Node* prev2 = prev;
+    while(temp != NULL){
+        prev2 = prev;
+        prev = temp;
+        temp = temp->next;
+        prev->next = prev2;
+    }
+
+    list->head  = prev;
+    
+    
 }
 
 
