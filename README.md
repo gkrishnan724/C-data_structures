@@ -76,7 +76,7 @@ typedef struct stack{
 
 The structure is pretty much like an array of linkedlists known as `hashMap`
 
-- `hashMap* init_map()`: Creates a hashMap and returns the pointer to the map 
+- `hashMap* create_map()`: Creates a hashMap and returns the pointer to the map 
 - `void add_item(hashMap* map,int key,int value)`: Adds a (key,value) pair to the hashMap, hashed based on the key **most likely O(1)**
 - `int get_item(hashMap* map,int key)`: returns the value of key. (returns -234 if not present ) **most likely O(1)**
 - `void remove_item(hashMap* map,int key)`: removes the key value pair from the map  **most likely O(1)**

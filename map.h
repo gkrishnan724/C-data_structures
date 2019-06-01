@@ -7,7 +7,7 @@
 typedef linkedList hashMap;
 
 //Function prototype
-hashMap* init_map();
+hashMap* create_map();
 int hash_function(int);
 int get_item(hashMap*,int);
 void add_item(hashMap*,int,int);
@@ -15,10 +15,10 @@ void remove_item(hashMap*,int);
 
 //Function definitions
 int hash_function(int key){
-    return key%MAX_SIZE;
+    return abs(key%MAX_SIZE);
 }
 
-hashMap* init_map(){
+hashMap* create_map(){
     hashMap* map = (hashMap*)malloc(MAX_SIZE*sizeof(linkedList));
     return map;
 }
